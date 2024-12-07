@@ -1,0 +1,179 @@
+
+.body{
+    display: flex;
+}
+.background {
+    background: rgb(36,6,90);
+    background: linear-gradient(38deg, rgba(36,6,90,1) 35%, rgba(138,11,49,1) 100%);
+    width: 60%;
+    height: 80vh;
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    border-radius: 8px;
+    box-shadow: 
+    10px 0 10px rgb(151, 79, 91) , 0 -10px 10px rgb(230, 109, 129) ,
+     -10px 0 10px rgb(119, 35, 184) , 
+     0 10px 10px rgb(95, 29, 170);
+}
+@media  (max-width:1280px) {
+    body {
+        width: 100%;
+        background: black;
+    }
+    .TextP {
+        font-size:40px !important;
+        border: 1px solid red;
+    }
+}
+.container {
+    width: 50%;
+    margin: -3% -3%;
+}
+.text-img--join{
+    margin-top: 0;
+    margin-left: 50px;
+}
+.Text{
+    font-family: "Monoton", serif;
+    z-index: 2;
+    position: relative;
+}
+
+.TextP{
+    color: white;
+    font-size: 45px;
+}
+.Img{
+    width: 500px;
+    position: relative;
+    left: 50px;
+    top: -70px;
+    z-index: 1;
+    display: flex;
+}
+.img-picture{
+    width: 300px;
+    height: 300px;
+    
+}
+.Text-join{
+    margin-top:55% ;
+    margin-left: -20%;
+    font-size: 40px;
+    font-weight: 200;
+    font-family: "Montserrat Alternates", sans-serif;   
+    width: max-content;
+    color: rgb(250, 250, 250);
+    z-index: 3;
+    display: flex;
+    align-items: flex-end;
+}
+.background-signup {
+    background-color: rgb(244, 237, 228);
+    width: 50%;
+    height: fit-content;
+    /* thông thường chiều cao để fit-content để có tính linh hoạt
+    phu thuoc vao sống lượng phần tử */
+    border-radius: 15px;
+    box-shadow:
+     -5px -5px 30px black;
+     margin-top: 2% ;
+     margin-left: 3%;
+}
+.Language-icon {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    
+}
+.language-english {
+    color: rgb(221, 93, 114);
+    font-size: larger;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+}
+.icon-muiten {
+    width:35px;
+    height: 35px;
+}
+.welcome {
+    font-size: 1.8rem;
+    font-weight: 300;
+    font-family: "Montserrat Alternates", sans-serif;
+    color: rgb(181, 64, 154);
+    text-align: center;
+    margin-top: -2%;
+
+}
+.creation {
+    font-size: 30px;
+    font-weight: 400;
+    font-family: "Montserrat Alternates", sans-serif;
+    margin-left: 70px;
+    margin-top: -3%;
+}
+.form-input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -3% ;
+}
+.input-collumn {
+    border: none;
+    outline: none;
+    margin-top: 5%;
+    padding: 10px;
+    background-color: rgb(242, 235, 222);
+    width: 70%;
+    box-shadow: 0 3px 10px rgb(47, 46, 46);
+    border-radius:8px;
+    font-size: 15px;
+    
+}
+.input-signup {
+    background-color: rgb(79, 220, 145);
+    font-family: "Montserrat Alternates", sans-serif;
+    font-size: x-large;
+    color: white;
+    cursor: pointer;
+}
+.policy {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: large;
+
+}
+.policy-title {
+    color: rgb(128, 126, 126);
+}
+.policy-link {
+    color: rgb(42, 238, 172);
+}
+.Or-center {
+    text-align: center;
+    margin-top: -10px;
+    font-size: 25px;
+    color: rgba(171, 146, 146, 1);
+
+}
+.icon-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 3%;
+}
+.IconLink {
+    width: 40px;
+    height: 40px;
+    margin: 0 20px;
+}
+.icon-img {
+    width: 100%;
+    border-radius: 40px;
+
+}

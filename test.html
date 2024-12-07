@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        /* CSS nội tuyến để tinh chỉnh nhanh */
+
+        /* Cấu trúc chung */
+        * {
+            box-sizing: border-box;
+        }
+        html {
+            font-size: 62.5%;
+            font-family: "Play", sans-serif;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            color: #fff;
+        }
+
+        /* Lưới */
+        .grid {
+            width: 1400px;
+            max-width: 100%;
+            margin: 0 auto;
+        }
+
+        /* Header */
+        .header {
+            background-image: url('bg_img.png');
+            background-size: cover;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+            z-index: 1000;
+        }
+
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem 2rem;
+        }
+
+        .header-img-link {
+            width: 10%;
+        }
+
+        .header-img-link--logo {
+            width: 100%;
+        }
+
+        .header-navbar-list {
+            display: flex;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .header-navbar-list-items {
+            font-size: 2rem;
+            text-transform: uppercase;
+            margin-left: 3.6rem;
+            position: relative;
+            color: #fff;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .header-navbar-list-items:hover {
+            color: #f9aa01;
+        }
+
+        .header-navbar-list-items::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(to right, transparent, #f9aa01, transparent);
+            transition: width 0.4s ease, left 0.4s ease, opacity 0.4s ease;
+            opacity: 0;
+        }
+
+        .header-navbar-list-items:hover::after {
+            width: 100%;
+            left: 0;
+            opacity: 1;
+        }
+
+        /* Biểu tượng mạng xã hội */
+        .list-icon {
+            display: flex;
+        }
+
+        .list-icon-items {
+            margin-left: 1rem;
+        }
+
+        .socials {
+            width: 30px;
+            height: 30px;
+        }
+
+        /* Bộ chọn ngôn ngữ */
+        .lang-list {
+            display: flex;
+            position: relative;
+        }
+
+        .list-lang {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 1rem;
+            border-radius: 4px;
+        }
+
+        .lang-list:hover .list-lang {
+            display: block;
+        }
+
+        .languages {
+            font-size: 1.6rem;
+            margin: 0.5rem 0;
+        }
+
+        .link-languages {
+            text-decoration: none;
+            color: hsl(41, 86%, 57%);
+        }
+
+        /* Container */
+        .container {
+            background-image: url('keyvisual.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container-logo {
+            width: 35%;
+            margin-bottom: 2rem;
+        }
+
+        .logo {
+            width: 100%;
+        }
+
+        .navigaiton h1 {
+            font-size: 3rem;
+            text-transform: uppercase;
+            margin-bottom: 2rem;
+        }
+
+        .app a {
+            display: inline-block;
+            margin: 0 1rem;
+            padding: 1rem 2rem;
+            font-size: 2rem;
+            text-transform: uppercase;
+            background-color: #f9aa01;
+            color: #000;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+
+        .app a:hover {
+            background-color: #fff;
+            color: #000;
+        }
+    </style>
+</head>
+<body>
+  <header class="header">
+    <div class="grid">
+        <nav class="navbar">
+            <a href="#" class="header-img-link">
+                <img src="top_logo.png" alt="Logo Dragon Ball" class="header-img-link--logo">
+            </a>
+            <ul class="header-navbar-list">
+                <li class="header-navbar-list-items"><a href="#" class="navbar-link">CHARACTERS</a></li>
+                <li class="header-navbar-list-items"><a href="#" class="navbar-link">NEWS</a></li>
+                <li class="header-navbar-list-items"><a href="#" class="navbar-link">MEDIAS</a></li>
+                <li class="header-navbar-list-items"><a href="#" class="navbar-link">TUTORIALS</a></li>
+                <li class="header-navbar-list-items"><a href="#" class="navbar-link">STORY</a></li>
+                <li class="header-navbar-list-items"><a href="#" class="navbar-link">BANDAI NAMCO ID</a></li>
+            </ul>
+            <ul class="list-icon">
+                <li class="list-icon-items"><a href="#"><img src="sns_facebook.svg" alt="Facebook" class="socials"></a></li>
+                <li class="list-icon-items"><a href="#"><img src="sns_instagram.png" alt="Instagram" class="socials"></a></li>
+                <li class="list-icon-items"><a href="#"><img src="sns_x.svg" alt="X" class="socials"></a></li>
+            </ul>
+            <div class="lang-list">
+                <a href="#" class="link-languages">EN</a>
+                <ul class="list-lang">
+                    <li class="languages"><a href="#" class="link-languages">VN</a></li>
+                    <li class="languages"><a href="#" class="link-languages">KR</a></li>
+                    <li class="languages"><a href="#" class="link-languages">JP</a></li>
+                    <li class="languages"><a href="#" class="link-languages">TW</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+</header>
+
+<div class="container">
+    <div class="container-logo">
+        <img src="top_logo.png" alt="Logo Dragon Ball" class="logo">
+    </div>
+    <div class="navigaiton">
+        <h1 class="download-app">Tải miễn phí</h1>
+    </div>
+    <div class="app">
+        <a href="#">App Store</a>
+        <a href="#">Google Play</a>
+    </div>
+</div>
+
+<footer class="footer">
+    &copy; 2024 Dragon Ball. Bảo lưu mọi quyền.
+</footer>
+</body>
+</html>
